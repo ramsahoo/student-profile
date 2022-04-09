@@ -1,0 +1,47 @@
+.student-profile {
+  display: flex;
+  border-bottom: 1px #efefef solid;
+  padding: 1rem 2rem;
+}
+
+.student-profile .profile-pic {
+  width: fit-content;
+}
+
+.student-profile .profile-pic img {
+  height: 150px;
+  border-radius: 100%;
+  border: 2px #efefef solid;
+  margin-top: 20px;
+  
+}
+
+.student-profile h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+}
+
+.student-profile .data {
+  padding-left: 3rem;
+  flex-grow: 1;
+}
+
+.student-profile .plus {
+  align-self: flex-start;
+  font-size: 5rem;
+  background: initial;
+  border: initial;
+  padding: initial;
+  cursor: pointer;
+  color: grey;
+}
+
+.student-profile .data .details {
+  margin-left: 2rem;
+}
+
+.student-profile .data .details > div {
+  padding-bottom: 0.5rem;
+}

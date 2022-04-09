@@ -1,0 +1,7 @@
+.tag {
+  padding: 0.75rem;
+  background: #efefef;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+}
