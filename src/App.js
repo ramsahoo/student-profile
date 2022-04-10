@@ -1,4 +1,4 @@
-import StudentList from "./components/StudentList";
+import StudentList from "./components/StudentDemographics";
 import "./App.css";
 
 function App() {

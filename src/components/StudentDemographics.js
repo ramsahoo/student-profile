@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import StudentProfile from "./StudentProfile";
 import useLocalStorage from "../hooks/useLocalStorage";
-import "./StudentList.css";
+import "./StudentDemographics.css";
 
-function StudentList() {
+function StudentDemographics() {
   const [filters, setFilters] = useState({});
   const [students, setStudents] = useLocalStorage("students", []);
 
@@ -18,7 +18,7 @@ function StudentList() {
           studentData.students.map((student) => ({ ...student, tags: [] }))
         );
       } catch (err) {
-        console.error("Unable to retrieve the student list from the API.");
+        console.error("Unable to retrieve the student demographics from the API.");
       }
     };
     if (students.length === 0) {
@@ -62,7 +62,7 @@ function StudentList() {
   };
 
   return (
-    <div className="student-list-container">
+    <div className="student-demographics-container">
       <input
         placeholder="Search by name"
         name="name"
@@ -75,7 +75,7 @@ function StudentList() {
         value={filters.tag}
         onChange={updateFilter}
       />
-      <div className="student-list">
+      <div className="student-demographics">
         {retrieveFilteredStudents().map((student, index) => (
           <StudentProfile
             student={student}
@@ -89,4 +89,4 @@ function StudentList() {
   );
 }
 
-export default StudentList;
+export default StudentDemographics;

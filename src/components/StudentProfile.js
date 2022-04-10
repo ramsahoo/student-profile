@@ -2,31 +2,22 @@ import React, { useRef, useState } from "react";
 import TestScores from "./TestScores";
 import TagList from "./TagList";
 import "./StudentProfile.css";
-
 const average = (...arr) =>
   arr.map((e) => +e).reduce((acc, e) => acc + e, 0) / arr.length;
-
 function StudentProfile({
   student: { pic, firstName, lastName, email, company, skill, grades, tags },
   addTag,
   removeTag,
 }) {
   const tagInputRef = useRef(null);
-
-  const [expanded, setExpanded, shouldBePlus] = useState(false);
-  const [collapsed, setCollapsed, shouldBeMinus] = useState(true);
+  const [expanded, setExpanded] = useState(false);
   const [tagInput, setTagInput] = useState("");
-
   const toggleExpanded = () => setExpanded(!expanded);
-  const toggleCollapsed = () => setCollapsed(!collapsed);
-
-
   const submitTag = (e) => {
     e.preventDefault();
     addTag(tagInputRef.current.value);
     setTagInput("");
   };
-
   return (
     <div className="student-profile">
       <div className="profile-pic">
@@ -53,14 +44,13 @@ function StudentProfile({
           {expanded && <TestScores scores={grades} />}
         </div>
       </div>
-      {shouldBePlus && (<button className="plus" onClick={toggleExpanded}>
+      {!expanded && (<button className="plus" onClick={toggleExpanded}>
         +
       </button>)}
-      {shouldBeMinus && (<button className="minus" onClick={toggleCollapsed}>
+      {expanded && (<button className="minus" onClick={toggleExpanded}>
         -
       </button>)}
     </div>
   );
 }
-
 export default StudentProfile;
