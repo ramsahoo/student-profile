@@ -1,6 +1,6 @@
 .student-profile {
   display: flex;
-  border-bottom: 1px #efefef solid;
+  border-bottom: 1px white solid;
   padding: 1rem 2rem;
 }
 
@@ -11,7 +11,7 @@
 .student-profile .profile-pic img {
   height: 150px;
   border-radius: 100%;
-  border: 2px #efefef solid;
+  border: 2px white solid;
   margin-top: 20px;
 }
 

@@ -2,48 +2,46 @@
   overflow-y: auto;
 }
 
-.student-demographics::-webkit-scrollbar {
-  width: 15px;
-}
-
-.student-demographics::-webkit-scrollbar-track {
-  background: #efefef;
-}
-
-.student-demographics::-webkit-scrollbar-thumb {
-  background: #dedede;
-}
-
-.student-demographics::-webkit-scrollbar-thumb:hover {
-  background: #cdcdcd;
-}
-
-.student-demographics::-webkit-scrollbar-thumb:active {
-  background: green;
-}
-
-.student-demographics-container input {
-  border: none;
-  border-bottom: 1px #efefef solid;
-  margin: 0 1rem;
-  padding: 0.75rem 0.25rem;
-}
-
-.student-demographics-container input:focus {
-  border-bottom: 1px grey solid;
-}
-
-.student-demographics-container input:focus {
-  outline: none;
-}
-
 .student-demographics-container {
   width: 60%;
   height: 80%;
   display: flex;
   flex-direction: column;
   background: white;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px lightgrey;
+  border-radius: 15px;
+  box-shadow: 0px 1px 0px 0px grey;
   padding-top: 0.5rem;
+  border: 0.25px solid lightgrey;
+  overflow: hidden;
+}
+
+.student-demographics-container input {
+  border: none;
+  outline: none;
+  border-bottom: 1px lightgrey solid;
+  margin: 0 1rem;
+  padding: 0.75rem 0.25rem;
+  font-size: 17px;
+}
+
+.student-demographics::-webkit-scrollbar {
+  width: 8px;
+  background: grey;
+}
+
+.student-demographics::-webkit-scrollbar-track {
+  background: white;
+}
+
+.student-demographics::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+.student-demographics::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+.student-demographics::-webkit-scrollbar-thumb:active {
+  background: grey;
 }

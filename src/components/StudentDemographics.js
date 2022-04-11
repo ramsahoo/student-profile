@@ -81,7 +81,7 @@ function StudentDemographics() {
             student={student}
             addTag={(tag) => addTag(index, tag)}
             removeTag={(tagIndex) => removeTag(index, tagIndex)}
-            key={`student-card-${student.id}`}
+            key={`student-demographics-${student.id}`}
           />
         ))}
       </div>

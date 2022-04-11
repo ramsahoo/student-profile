@@ -6,8 +6,7 @@ const average = (...arr) =>
   arr.map((e) => +e).reduce((acc, e) => acc + e, 0) / arr.length;
 function StudentProfile({
   student: { pic, firstName, lastName, email, company, skill, grades, tags },
-  addTag,
-  removeTag,
+  addTag, removeTag
 }) {
   const tagInputRef = useRef(null);
   const [expanded, setExpanded] = useState(false);
@@ -39,17 +38,22 @@ function StudentProfile({
               value={tagInput}
               onChange={(e) => setTagInput(e.target.value)}
               ref={tagInputRef}
+              className="add-tag"
             />
           </form>
           {expanded && <TestScores scores={grades} />}
         </div>
       </div>
-      {!expanded && (<button className="plus" onClick={toggleExpanded}>
-        +
-      </button>)}
-      {expanded && (<button className="minus" onClick={toggleExpanded}>
-        -
-      </button>)}
+      {!expanded && (
+        <button className="plus" onClick={toggleExpanded}>
+          +
+        </button>
+      )}
+      {expanded && (
+        <button className="minus" onClick={toggleExpanded}>
+          -
+        </button>
+      )}
     </div>
   );
 }
