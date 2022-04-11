@@ -2,11 +2,13 @@ import React, { useRef, useState } from "react";
 import TestScores from "./TestScores";
 import TagList from "./TagList";
 import "./StudentProfile.css";
+
 const average = (...arr) =>
   arr.map((e) => +e).reduce((acc, e) => acc + e, 0) / arr.length;
 function StudentProfile({
   student: { pic, firstName, lastName, email, company, skill, grades, tags },
-  addTag, removeTag
+  addTag,
+  removeTag,
 }) {
   const tagInputRef = useRef(null);
   const [expanded, setExpanded] = useState(false);

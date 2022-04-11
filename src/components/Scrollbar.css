@@ -1,0 +1,21 @@
+.student-demographics::-webkit-scrollbar {
+  width: 8px;
+  background: grey;
+}
+
+.student-demographics::-webkit-scrollbar-track {
+  background: white;
+}
+
+.student-demographics::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+.student-demographics::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+.student-demographics::-webkit-scrollbar-thumb:active {
+  background: grey;
+}

@@ -23,25 +23,3 @@
   padding: 0.75rem 0.25rem;
   font-size: 17px;
 }
-
-.student-demographics::-webkit-scrollbar {
-  width: 8px;
-  background: grey;
-}
-
-.student-demographics::-webkit-scrollbar-track {
-  background: white;
-}
-
-.student-demographics::-webkit-scrollbar-thumb {
-  background: white;
-  border-radius: 10px;
-}
-
-.student-demographics::-webkit-scrollbar-thumb:hover {
-  background: grey;
-}
-
-.student-demographics::-webkit-scrollbar-thumb:active {
-  background: grey;
-}

@@ -1,10 +1,10 @@
-import StudentList from "./components/StudentDemographics";
+import StudentDemographics from "./components/StudentDemographics";
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <StudentList />
+      <StudentDemographics />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import StudentProfile from "./StudentProfile";
 import useLocalStorage from "../hooks/useLocalStorage";
+import "./Scrollbar.css";
 import "./StudentDemographics.css";
 
 function StudentDemographics() {
@@ -18,7 +19,9 @@ function StudentDemographics() {
           studentData.students.map((student) => ({ ...student, tags: [] }))
         );
       } catch (err) {
-        console.error("Unable to retrieve the student demographics from the API.");
+        console.error(
+          "Unable to retrieve the student demographics from the API."
+        );
       }
     };
     if (students.length === 0) {
